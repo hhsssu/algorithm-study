@@ -1,13 +1,12 @@
 class Solution {
     public int solution(int n) {
-        int root = (int)Math.sqrt(n);
-        double doubleRoot = Math.sqrt(n);
-        int result = 1;
+        int result = 0;
         
-        if((double)root - doubleRoot < 0) {
+        if(n % Math.sqrt(n) == 0) {
+            result = 1;
+        } else {
             result = 2;
-        }        
-        
+        }
         
         return result;
     }
